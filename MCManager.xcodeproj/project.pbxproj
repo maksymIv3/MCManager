@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		3FBB9E9C23E0762D007BDCA5 /* MCManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBB9E9A23E0762C007BDCA5 /* MCManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FBB9EA323E07665007BDCA5 /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB9EA223E07665007BDCA5 /* MCManager.m */; };
-		3FBB9EA723E08171007BDCA5 /* MCObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBB9EA523E08171007BDCA5 /* MCObserver.h */; };
+		3FBB9EA723E08171007BDCA5 /* MCObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBB9EA523E08171007BDCA5 /* MCObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FBB9EA823E08171007BDCA5 /* MCObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBB9EA623E08171007BDCA5 /* MCObserver.m */; };
-		3FBB9EAA23E08218007BDCA5 /* MCObserverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBB9EA923E08218007BDCA5 /* MCObserverProtocol.h */; };
+		3FBB9EAA23E08218007BDCA5 /* MCObserverProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FBB9EA923E08218007BDCA5 /* MCObserverProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
