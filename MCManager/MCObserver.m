@@ -10,7 +10,7 @@
 #import "MCObserverProtocol.h"
 
 @interface MCObserver ()
-@property (nonatomic, strong) NSMutableArray *observers; // of NSObject classes
+@property (nonatomic, strong) NSMutableArray *observers; // of id<MCObserverProtocol> objects
 @end
 
 @implementation MCObserver
@@ -21,11 +21,11 @@
 }
 
 - (void)addObserver:(id<MCObserverProtocol>)object {
-    [self.observers addObject:[object class]];
+    [self.observers addObject:object];
 }
 
 - (void)removeObserver:(id<MCObserverProtocol>)object {
-    NSUInteger objectIndex = [self.observers indexOfObject:[object class]];
+    NSUInteger objectIndex = [self.observers indexOfObject:object];
     if (objectIndex) {
         [self.observers removeObjectAtIndex:objectIndex];
     }
