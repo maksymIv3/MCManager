@@ -18,7 +18,8 @@
 @property (nonatomic) MCSessionState state;
 
 +(instancetype)shared;
--(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName mcServiceType:(NSString *)mcServiceType;
+-(void)setUpManagerWithMCServiceType:(NSString *)mcServiceType;
+-(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName;
 -(void)setupMCBrowser;
 -(void)advertiseSelf:(BOOL)shouldAdvertise;
 -(void)addObserver:(id<MCObserverProtocol>)object;

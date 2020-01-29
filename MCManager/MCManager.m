@@ -26,6 +26,10 @@
     return sharedObject;
 }
 
+- (void)setUpManagerWithMCServiceType:(NSString *)mcServiceType {
+    _mcServiceType = mcServiceType;
+}
+
 - (MCObserver *)observer {
     if (!_observer) _observer = [[MCObserver alloc] init];
     return _observer;
@@ -39,13 +43,12 @@
     [self.observer removeObserver:object];
 }
 
--(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName mcServiceType:(NSString *)mcServiceType {
+-(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName {
     _peerID = [[MCPeerID alloc] initWithDisplayName:displayName];
     
     _session = [[MCSession alloc] initWithPeer:_peerID];
     _state = MCSessionStateNotConnected;
     _session.delegate = self;
-    _mcServiceType = mcServiceType;
 }
 
 -(void)setupMCBrowser{
