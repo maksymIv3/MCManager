@@ -10,8 +10,8 @@
 #import "MCObserverProtocol.h"
 
 @interface MCObserver : NSObject
-- (void)addObserver:(Class <MCObserverProtocol>)object;
-- (void)removeObserver:(Class <MCObserverProtocol>)object;
+- (void)addObserver:(id<MCObserverProtocol>)object;
+- (void)removeObserver:(id<MCObserverProtocol>)object;
 - (void)notifyObserversDidChangeState:(MCSessionState)state peer:(MCPeerID *)peerID;
 - (void)notifyObserversDidReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID;
 - (void)notifyObserversDidStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress;

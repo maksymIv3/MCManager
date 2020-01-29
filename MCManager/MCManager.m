@@ -31,11 +31,11 @@
     return _observer;
 }
 
-- (void)addObserver:(Class<MCObserverProtocol>)object {
+- (void)addObserver:(id<MCObserverProtocol>)object {
     [self.observer addObserver:object];
 }
 
-- (void)removeObserver:(Class<MCObserverProtocol>)object {
+- (void)removeObserver:(id<MCObserverProtocol>)object {
     [self.observer removeObserver:object];
 }
 

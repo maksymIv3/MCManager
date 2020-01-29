@@ -21,6 +21,6 @@
 -(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName mcServiceType:(NSString *)mcServiceType;
 -(void)setupMCBrowser;
 -(void)advertiseSelf:(BOOL)shouldAdvertise;
--(void)addObserver:(Class<MCObserverProtocol>)object;
--(void)removeObserver:(Class<MCObserverProtocol>)object;
+-(void)addObserver:(id<MCObserverProtocol>)object;
+-(void)removeObserver:(id<MCObserverProtocol>)object;
 @end
