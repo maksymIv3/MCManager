@@ -1,9 +1,9 @@
 # MCManager
 
 <p align="center">
-<a href="https://cocoapods.org/pods/MCManager"><img alt="Version" src="https://img.shields.io/cocoapods/v/Randomizer.svg?style=flat"></a> 
+<a href="https://cocoapods.org/pods/MCManager"><img alt="Version" src="https://img.shields.io/cocoapods/v/MCManager.svg?style=flat"></a> 
 <a href="https://github.com/Carthage/Carthage"><img alt="Version" src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
-<a href="https://github.com/maksymIv3/Randomizer/blob/master/LICENSE"><img alt="Liscence" src="https://img.shields.io/cocoapods/l/IgyToast.svg?style=flat"></a> 
+<a href="https://github.com/maksymIv3/MCManager/blob/master/LICENSE"><img alt="Liscence" src="https://img.shields.io/cocoapods/l/IgyToast.svg?style=flat"></a> 
 <a href="https://developer.apple.com/"><img alt="Platform" src="https://img.shields.io/badge/platform-iOS-green.svg"/></a> 
 
 ## Installation
