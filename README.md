@@ -23,3 +23,65 @@ pod 'MCManager', '~> 0.0.8'
 ```ogdl
 github "maksymIv3/MCManager" ~> 0.0.8
 ```
+
+## Usage
+
+### Basic usage
+import module:
+```objective-c
+#import <MCManager/MCManager.h>
+```
+add self as observer:
+
+```objective-c
+[[MCManager shared] addObserver:self];
+```
+
+setup peer and session with display name:
+```objective-c
+[[MCManager shared] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name]];
+```
+
+to advertise self:
+```objective-c
+[[MCManager shared] advertiseSelf:YES];
+```
+
+setup browser:
+```objective-c
+[[MCManager shared] setupMCBrowser];
+[[MCManager shared] setDelegate:self];
+[self presentViewController:[[MCManager shared] browser] animated:YES completion:nil];
+```
+
+browser view controller delegate methods:
+```objective-c
+- (void)browserViewControllerDidFinish:(nonnull MCBrowserViewController *)browserViewController;
+- (void)browserViewControllerWasCancelled:(nonnull MCBrowserViewController *)browserViewController;
+```
+
+diconnect: 
+```objective-c
+[[MCManager shared].session diconnect];
+```
+
+send data:
+```objective-c
+NSError *error;
+MCManager *mcManager = [MCManager shared];
+[mcManager.session sendData:data
+                    toPeers:mcManager.session.connectedPeers
+                   withMode:MCSessionSendDataReliable
+                      error:&error];
+```
+
+to add self as observer we need to implement MCObserverProtocol:
+```objective-c
+#import <MCManager/MCObserverProtocol.h>
+
+-(void)didChangeState:(MCSessionState)state peer:(MCPeerID *)peerID;
+-(void)didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID;
+-(void)didStartReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID withProgress:(NSProgress *)progress;
+-(void)didFinishReceivingResourceWithName:(NSString *)resourceName fromPeer:(MCPeerID *)peerID atURL:(NSURL *)localURL withError:(NSError *)error;
+-(void)didReceiveStream:(NSInputStream *)stream withName:(NSString *)streamName fromPeer:(MCPeerID *)peerID;
+```
